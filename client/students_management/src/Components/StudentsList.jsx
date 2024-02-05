@@ -24,11 +24,11 @@ import MenuItem from '@mui/material/MenuItem';
 
       const handleDelete = async (id)=>{
           try{
-              let data = await axios.delete(`http://localhost:2020/students/${id}`);
+              let data = await axios.delete(`https://students-management-app-3hzd.onrender.com/students/${id}`);
 
              // console.log(data);
               alert(`Successfully Deleted`);
-              getData(`http://localhost:2020/students?page=${page}`)
+              getData(`https://students-management-app-3hzd.onrender.com/students?page=${page}`)
           }catch(err){
               console.log(err)
           }
@@ -43,7 +43,7 @@ import MenuItem from '@mui/material/MenuItem';
       try{
         if(filter_q==="Age"){
            
-            let data = await axios.get(`http://localhost:2020/students/filter_age?age=${filter_v}`,{
+            let data = await axios.get(`https://students-management-app-3hzd.onrender.com/students/filter_age?age=${filter_v}`,{
               header:{
                 Authorization:`Bearer ${JSON.parse(token)}`
               }
@@ -59,7 +59,7 @@ import MenuItem from '@mui/material/MenuItem';
             // console.log(d);
         }else{
          
-          let data = await axios.get(`http://localhost:2020/students/filter_name?name=${filter_v}`,{
+          let data = await axios.get(`https://students-management-app-3hzd.onrender.com/students/filter_name?name=${filter_v}`,{
               header:{
                 Authorization:`Bearer ${JSON.parse(token)}`
               }
@@ -90,7 +90,7 @@ import MenuItem from '@mui/material/MenuItem';
         }
        
        
-        let {data} = await axios.get(`http://localhost:2020/students?page=${page}`,{
+        let {data} = await axios.get(`https://students-management-app-3hzd.onrender.com/students?page=${page}`,{
           header:{
             Authorization:`Bearer ${JSON.parse(token)}`
           }
