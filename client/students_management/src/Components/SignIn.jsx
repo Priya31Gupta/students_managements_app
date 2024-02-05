@@ -21,7 +21,7 @@ export const SignIn = ()=>{
                     let b ={
                         email : email
                      }
-                    fetch("http://localhost:2020/signin",{
+                    fetch("https://students-management-app-3hzd.onrender.com/signin",{
                         method: "POST",
                        body: JSON.stringify(b),
                         headers: {
@@ -63,7 +63,7 @@ export const SignIn = ()=>{
             <TextField onChange={(e)=>{setEmail(e.target.value)}} label={'Email'} id="margin-none" sx={{ fontSize: 25,textAlign:"center",margin:"4% 5%",width:"90%" }} />
 
             <Button variant="outlined" onClick={()=>{handleSignin()}} sx={{ textAlign:"center",margin:"4% 5%",width:"90%" }}>Sign In</Button>
-            <a href="http://localhost:2020/auth/google" target="_blank" rel="noreferrer noopener">
+            <a href="https://students-management-app-3hzd.onrender.com/auth/google" target="_blank" rel="noreferrer noopener">
             <Button variant="outlined"  sx={{ textAlign:"center",margin:"4% 5%",width:"90%"}}>
             <Avatar src="https://cdn-icons-png.flaticon.com/512/281/281764.png" height='25px' width='25px'/><span style={{textDecoration:"none",margin:"0% 3%" }}>Sign In</span> 
             </Button>
