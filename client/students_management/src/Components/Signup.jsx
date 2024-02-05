@@ -17,7 +17,7 @@ export const Signup = ()=>{
                     let b ={
                         email : email
                      }
-                    fetch("http://localhost:2020/signup",{
+                    fetch("https://students-management-app-3hzd.onrender.com/signup",{
                         method: "POST",
                        body: JSON.stringify(b),
                         headers: {
