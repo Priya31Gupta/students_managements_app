@@ -38,7 +38,7 @@ export const AddContest =()=>{
          try{
 
            
-            fetch("http://localhost:2020/contest",{
+            fetch("https://students-management-app-3hzd.onrender.com/contest",{
                 method: "POST",
                body: JSON.stringify(body_p),
                 headers: {
