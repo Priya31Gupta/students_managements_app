@@ -16,13 +16,13 @@ function Contest(){
     const filteredData =async (t)=>{
       //  settype(e.target.value);
        // console.log(t)
-        let {data} = await axios.get(`http://localhost:2020/contest/sort_type?page=${page}&type=${t}`);
+        let {data} = await axios.get(`https://students-management-app-3hzd.onrender.com/contest/sort_type?page=${page}&type=${t}`);
             // console.log(data)
              setData(data);
  
     }
     const sortedDataSet=async ()=>{
-        let {data} = await axios.get(`http://localhost:2020/contest/sort_deadline`);
+        let {data} = await axios.get(`https://students-management-app-3hzd.onrender.com/contest/sort_deadline`);
         //console.log(data)
         setData(data);
     }
@@ -35,7 +35,7 @@ function Contest(){
 
     }
     useEffect(()=>{
-        getData(`http://localhost:2020/contest?page=${page}`);
+        getData(`https://students-management-app-3hzd.onrender.com/contest?page=${page}`);
     },[page])
     return(
         <>
