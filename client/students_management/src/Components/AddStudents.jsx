@@ -34,7 +34,7 @@ export const AddStudents =()=>{
          try{
 
            
-            fetch("http://localhost:2020/students",{
+            fetch("https://students-management-app-3hzd.onrender.com/students",{
                 method: "POST",
                body: JSON.stringify(body_p),
                 headers: {
